@@ -13,12 +13,8 @@ In this tutorial, we’ll learn how to use regular expressions (regex) to match 
 - [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
 - [Flags](#flags)
-- [Grouping and Capturing](#grouping-and-capturing)
-- [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+
 
 ## Regex Components
 
@@ -44,24 +40,60 @@ Example: a* matches "", "a", "aa", "aaa", etc.
 
 What It Does: Matches 1 or more occurrences of the preceding pattern.
 Example: a+ matches "a", "aa", "aaa", but not "".
+
 ### OR Operator
+The OR operator | enables matching one pattern or another, offering a choice between alternatives.
+
+-Syntax: pattern1|pattern2
+
+What It Does: Matches either pattern1 or pattern2.
+
+Example: cat|dog
 
 ### Character Classes
+Character classes match any single character from a defined set.
+
+-Square Brackets ([])
+
+Syntax: [abc]
+What It Does: Matches any one of the characters inside the brackets.
+
+-Range of Characters
+
+Syntax: [a-z]
+What It Does: Matches any character within the specified range.
+
 
 ### Flags
+Regex flags modify how a pattern is matched. They control various aspects of the regex engine’s behavior.
 
-### Grouping and Capturing
+-Case Insensitivity (i)
 
-### Bracket Expressions
+Syntax: /pattern/i
+What It Does: Makes the regex match letters regardless of case.
+
+Example: /hello/i
+
+-Multi-line Matching (m)
+
+Syntax: /pattern/m
+What It Does: Treats the start (^) and end ($) of a string as the start and end of each line within the string.
+
+Example: /^abc/m
 
 ### Greedy and Lazy Match
+In regex, greedy quantifiers match as much text as possible, while lazy quantifiers match as little as possible. Using them correctly helps you get the exact matches you need.
 
-### Boundaries
+-Asterisk (*)
 
-### Back-references
+Syntax: a*
+What It Does: Matches zero or more occurrences of "a".
 
-### Look-ahead and Look-behind
+-Braces ({n,m}?)
+
+Syntax: a{2,4}?
+What It Does: Matches between 2 and 4 occurrences of "a", but as few as necessary.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+This tutorial was created by Davison Hernandez. Explore more of my projects on https://github.com/
